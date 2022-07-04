@@ -1,12 +1,10 @@
 import React from 'react'
-import Router from './components/RouteSwitch'
 import ReactDOM from 'react-dom'
+import Router from './components/RouteSwitch'
 
 ReactDOM.render(
   <React.StrictMode>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Router />
-        </BrowserRouter>
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
