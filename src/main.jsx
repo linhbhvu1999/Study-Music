@@ -1,8 +1,12 @@
 import React from 'react'
 import Router from './components/RouteSwitch'
-import { BrowserRouter } from "react-router-dom"
+import ReactDOM from 'react-dom'
 
-<BrowserRouter basename={window.location.pathname || ''}>
-  <Router exact path="/StudyBeats/" component={Index} />
-</BrowserRouter>
-
+ReactDOM.render(
+  <React.StrictMode>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Router />
+        </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
