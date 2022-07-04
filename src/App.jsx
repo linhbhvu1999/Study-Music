@@ -11,12 +11,11 @@ import AudioControls from "./components/audioControl";
 import pauseImg from "./images/pause.png";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
-import { HashRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 
-ReactDOM.render(
-  <HashRouter><App /></HashRouter>,
-  document.getElementById('root')
-);
+<BrowserRouter basename={window.location.pathname || ''}>
+  <Route exact path="/StudyBeats/" component={Index} />
+</BrowserRouter>
 
 function App() {
   const [BtnClass, setBtnClass] = useState("PlayPause"); //pause play change
